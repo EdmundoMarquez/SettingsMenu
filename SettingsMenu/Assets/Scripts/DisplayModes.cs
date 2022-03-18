@@ -7,4 +7,12 @@ namespace SettingsMenu
         Windowed,
         Fullscreen
     }
+
+    public enum CustomQualityLevels
+    {
+        Low,
+        Mid,
+        High
+    }
+
 }
