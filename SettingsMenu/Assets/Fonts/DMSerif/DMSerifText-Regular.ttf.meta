@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 9788522376824f4d6ba4b356de9637a9
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: DM Serif Text
+  fontNames:
+  - DM Serif Text
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 15a8b643bc9c978298e4c03d468b47a5, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
