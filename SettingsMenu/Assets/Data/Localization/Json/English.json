@@ -1,0 +1,23 @@
+{
+    "apply_btn": "Apply",
+    "cancel_btn": "Cancel",
+    "display_btn": "Display",
+    "audio_btn": "Audio",
+    "accessibility_btn": "Accessibility",
+    "settings": "Settings",
+    "resolution": "Resolution",
+    "target_fps": "Frame Rate",
+    "display_mode": "Display Mode",
+    "vsync": "V-Sync",
+    "graphic_presets": "Graphic Presets",
+    "texture_quality": "Texture Quality",
+    "antialias": "Anti-aliiasing",
+    "sound_master": "Master",
+    "sound_music": "Music",
+    "sound_sfx": "Sfx",
+    "sound_ambient": "Ambient",
+    "language": "Language",
+    "font_preset": "Font Preset",
+    "font_size": "Font Size",
+    "tts": "Text-To-Speech (TTS)"
+}

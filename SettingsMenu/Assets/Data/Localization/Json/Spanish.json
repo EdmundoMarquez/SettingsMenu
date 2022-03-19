@@ -1,0 +1,23 @@
+{
+    "apply_btn": "Aplicar",
+    "cancel_btn": "Cancelar",
+    "display_btn": "Gráficos",
+    "audio_btn": "Sonido",
+    "accessibility_btn": "Accesibilidad",
+    "settings": "Ajustes",
+    "resolution": "Resolución",
+    "target_fps": "Tasa de FPS",
+    "display_mode": "Modo de pantalla",
+    "vsync": "Sincronización vertical",
+    "graphic_presets": "Gráficos",
+    "texture_quality": "Texturas",
+    "antialias": "Anti-aliiasing",
+    "sound_master": "General",
+    "sound_music": "Música",
+    "sound_sfx": "Efectos de sonido",
+    "sound_ambient": "Ambiente",
+    "language": "Idioma",
+    "font_preset": "Fuente de texto",
+    "font_size": "Tamaño de texto",
+    "tts": "Text-To-Speech (TTS)"
+}
