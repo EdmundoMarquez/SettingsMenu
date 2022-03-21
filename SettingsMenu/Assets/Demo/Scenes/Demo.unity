@@ -586,6 +586,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textId: save_btn
   _text: {fileID: 282021507}
+--- !u!114 &304669407 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3984080060001227036, guid: a51b62315d1ef732cb440cff2dcfaac0,
+    type: 3}
+  m_PrefabInstance: {fileID: 408326165}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc0d37227f30476283e1e5e16aa8503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &369510586
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,7 +798,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1941045550}
+      objectReference: {fileID: 1941045551}
     - target: {fileID: 6509317087341628990, guid: a51b62315d1ef732cb440cff2dcfaac0,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -795,7 +807,7 @@ PrefabInstance:
     - target: {fileID: 6509317087341628990, guid: a51b62315d1ef732cb440cff2dcfaac0,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetTargetFps
+      value: SetFontSize
       objectReference: {fileID: 0}
     - target: {fileID: 6509317087341628990, guid: a51b62315d1ef732cb440cff2dcfaac0,
         type: 3}
@@ -6375,6 +6387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fontTypeDropdown: {fileID: 2111213509}
+  _fontSizeDropdown: {fileID: 304669407}
 --- !u!114 &1941045552
 MonoBehaviour:
   m_ObjectHideFlags: 0
