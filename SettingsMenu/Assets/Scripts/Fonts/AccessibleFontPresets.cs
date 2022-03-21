@@ -13,9 +13,9 @@ namespace Fragsoft.Fonts
         public TMP_FontAsset SansSerifFont;
         public TMP_FontAsset OpenDyslexicFont;
         [Header("Font Sizes")]
-        [Range(5,20)] public float smallSize = 20;
-        [Range(20,35)] public float mediumSize = 35;
-        [Range(35,50)] public float largeSize = 50;
+        [Range(20,70)] public float smallSize = 20;
+        [Range(20,70)] public float mediumSize = 35;
+        [Range(20,70)] public float largeSize = 50;
 
         public TMP_FontAsset GetFont(int preset)
         {
@@ -29,6 +29,21 @@ namespace Fragsoft.Fonts
                 case 2:
                     return OpenDyslexicFont;
             }
+        }
+
+        public float GetSize(int size)
+        {
+            switch(size)
+            {
+                default:
+                case 0:
+                    return smallSize;
+                case 1:
+                    return mediumSize;
+                case 2:
+                    return largeSize;
+            }
+            
         }
     }       
 }

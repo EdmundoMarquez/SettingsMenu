@@ -12,6 +12,7 @@ namespace Fragsoft.Fonts
         public void OnEvent(FontChanged e)
         {
             _text.font = _fontPresets.GetFont(e.fontPreset);
+            _text.fontSizeMax = _fontPresets.GetSize(e.fontSize);
         }
 
         private void OnEnable() 
