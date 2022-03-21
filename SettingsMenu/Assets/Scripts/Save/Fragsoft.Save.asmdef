@@ -1,0 +1,15 @@
+{
+    "name": "Fragsoft.Save",
+    "references": [
+        "GUID:9e2e7b50d7ed1cb49899809ac6fe11cf"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
