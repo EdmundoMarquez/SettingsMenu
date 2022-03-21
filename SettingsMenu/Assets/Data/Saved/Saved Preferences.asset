@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cc16fffdebc23f628793a79a0b956a9, type: 3}
   m_Name: Saved Preferences
   m_EditorClassIdentifier: 
-  resolutionIndex: 7
-  displayMode: 0
-  targetFps: 60
+  resolutionIndex: 0
+  displayMode: 1
+  targetFps: 1
   vSync: 0
   graphicsPreset: 5
   texturesQuality: 2
-  masterVol: -27
-  musicVol: 0
-  sfxVol: -43
+  masterVol: -5
+  musicVol: -5
+  sfxVol: -5
   ambientVol: -5
-  languageIndex: 1
-  fontPreset: 2
-  fontSize: 0
+  languageIndex: 0
+  fontPreset: 1
+  fontSize: 1

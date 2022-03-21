@@ -9,7 +9,7 @@
     "resolution": "Resolución",
     "target_fps": "Tasa de FPS",
     "display_mode": "Modo de pantalla",
-    "vsync": "Sincronización vertical",
+    "vsync": "V-Sync",
     "graphic_presets": "Gráficos",
     "texture_quality": "Texturas",
     "antialias": "Anti-aliiasing",

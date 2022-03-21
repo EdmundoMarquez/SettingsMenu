@@ -20,7 +20,7 @@ namespace Fragsoft.Save
         public int ambientVol = -5;
         [Header("Language")]
         public int languageIndex = 0;
-        public int fontPreset = 0;
+        public int fontPreset = 1;
         public int fontSize = 1;
     }
 }

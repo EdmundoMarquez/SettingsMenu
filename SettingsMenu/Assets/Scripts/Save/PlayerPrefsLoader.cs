@@ -57,7 +57,7 @@ namespace Fragsoft.Save
             _savedPreferences.ambientVol = -5;
             
             _savedPreferences.languageIndex = 0;
-            _savedPreferences.fontPreset = 0;
+            _savedPreferences.fontPreset = 1;
             _savedPreferences.fontSize = 1;
 
             LoadPrefs();
