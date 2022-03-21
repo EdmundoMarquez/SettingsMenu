@@ -1,7 +1,7 @@
 ﻿using TMPro;
 
 
-namespace SettingsMenu
+namespace Fragsoft.Fonts
 {
     using UnityEngine;
     

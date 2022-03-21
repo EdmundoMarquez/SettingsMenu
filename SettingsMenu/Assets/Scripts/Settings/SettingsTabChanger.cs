@@ -2,7 +2,7 @@
 using DG.Tweening;
 using UnityEngine.UI;
 
-namespace SettingsMenu
+namespace Fragsoft.Settings
 {
     public class SettingsTabChanger : MonoBehaviour
     {

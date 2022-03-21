@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json;
-using SettingsMenu.EventBus;
+using Fragsoft.EventBus;
 
-namespace SettingsMenu.Language
+namespace Fragsoft.Language
 {
     [DefaultExecutionOrder(-1)]
     public class LanguageTextConverter : MonoBehaviour

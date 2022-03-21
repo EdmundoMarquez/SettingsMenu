@@ -1,9 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using SettingsMenu.EventBus;
+using Fragsoft.EventBus;
+using Fragsoft.Common;
+using Fragsoft.Fonts;
 
-namespace SettingsMenu
+namespace Fragsoft.Settings
 {
     public class FontSettings : MonoBehaviour
     {

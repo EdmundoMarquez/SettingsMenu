@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using TMPro;
-using SettingsMenu.Language;
+using Fragsoft.Language;
 using System.Collections.Generic;
+using Fragsoft.Common;
 
-namespace SettingsMenu
+namespace Fragsoft.Settings
 {
     public class LanguageSettings : MonoBehaviour
     {

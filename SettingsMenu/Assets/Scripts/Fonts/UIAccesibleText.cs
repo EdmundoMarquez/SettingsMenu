@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
-using SettingsMenu.EventBus;
+using Fragsoft.EventBus;
 using TMPro;
 
-namespace SettingsMenu
+namespace Fragsoft.Fonts
 {
     public class UIAccesibleText : MonoBehaviour, IEventReceiver<FontChanged>
     {

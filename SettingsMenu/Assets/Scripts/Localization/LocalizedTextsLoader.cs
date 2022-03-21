@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SettingsMenu.Language
+namespace Fragsoft.Language
 {
     public class LocalizedTextsLoader : MonoBehaviour
     {

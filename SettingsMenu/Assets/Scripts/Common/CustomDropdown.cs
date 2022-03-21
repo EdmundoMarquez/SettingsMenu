@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 
-namespace SettingsMenu
+namespace Fragsoft.Common
 {
     public class CustomDropdown : MonoBehaviour
     {

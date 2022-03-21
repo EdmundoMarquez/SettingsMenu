@@ -1,4 +1,4 @@
-﻿namespace SettingsMenu.EventBus
+﻿namespace Fragsoft.EventBus
 {
     using UnityEngine;
     using System;

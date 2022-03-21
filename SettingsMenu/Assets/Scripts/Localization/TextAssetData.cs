@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SettingsMenu.Language
+namespace Fragsoft.Language
 {
     
     [CreateAssetMenu(fileName = "Text Asset Data", menuName = "Language/Text Asset Data", order = 0)]

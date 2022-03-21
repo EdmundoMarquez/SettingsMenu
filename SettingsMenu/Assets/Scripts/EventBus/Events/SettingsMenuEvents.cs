@@ -1,5 +1,5 @@
 using UnityEngine;
-namespace SettingsMenu.EventBus
+namespace Fragsoft.EventBus
 {
     public struct FontChanged : IEvent {}
     public struct LanguageChanged : IEvent {}

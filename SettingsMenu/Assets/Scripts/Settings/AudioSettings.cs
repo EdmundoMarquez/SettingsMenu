@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
 
-namespace SettingsMenu
+namespace Fragsoft.Settings
 {
     public class AudioSettings : MonoBehaviour
     {

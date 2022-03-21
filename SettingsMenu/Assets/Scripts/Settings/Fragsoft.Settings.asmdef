@@ -1,0 +1,20 @@
+{
+    "name": "Fragsoft.Settings",
+    "references": [
+        "GUID:d529d52630f8543ab81dbc70319a848f",
+        "GUID:a9c31b4621f989acfb41892392b16fee",
+        "GUID:52956042012b32798b4e6812b0efa9a3",
+        "GUID:6fe8e63a2557e1226bfaa74f76d2eafa",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:6ceb48d5b80a209a38d4eb9c6e4d019d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -2,8 +2,9 @@
 using TMPro;
 using System;
 using System.Collections.Generic;
+using Fragsoft.Common;
 
-namespace SettingsMenu
+namespace Fragsoft.Settings
 {
     public class GraphicsSettings : MonoBehaviour
     {

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-namespace SettingsMenu.Language
+namespace Fragsoft.Language
 {
     public class LanguageStreamLoader : MonoBehaviour
     {

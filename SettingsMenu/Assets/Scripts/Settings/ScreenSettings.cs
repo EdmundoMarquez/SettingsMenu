@@ -3,8 +3,9 @@ using UnityEngine.UI;
 using System.Linq;
 using System;
 using System.Collections.Generic;
+using Fragsoft.Common;
 
-namespace SettingsMenu
+namespace Fragsoft.Settings
 {
     public class ScreenSettings : MonoBehaviour
     {
