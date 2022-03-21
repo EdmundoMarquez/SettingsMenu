@@ -13,7 +13,6 @@ namespace Fragsoft.Language
         {
             string text = LanguageTextConverter.LoadTitleText(_textId);
             _text.text = text; 
-            Debug.Log(text);
         }
 
         public void OnEvent(LanguageChanged e)

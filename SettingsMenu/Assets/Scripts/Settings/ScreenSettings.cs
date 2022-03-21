@@ -13,28 +13,45 @@ namespace Fragsoft.Settings
         [SerializeField] private  CustomDropdown _targetFpsDropdown = null;
         [SerializeField] private  CustomDropdown _displayModeDropdown = null;
         [SerializeField] private Toggle _vSyncToggle = null;
+        private int _refreshRate = 60;
         private Resolution[] _resolutions;
         private int _resolutionIndex;
-        private int _targetFps = 60;
-        private int _refreshRate = 60;
+        private int _targetFps;
+        private DisplayModes _displayMode;
+        private bool _vSync;
+        public int ResolutionIndex => _resolutionIndex;
+        public int TargetFps => _targetFps;
+        public int DisplayMode => (int)_displayMode;
+        public int VSync => _vSync ? 1 : 0;
 
-        private void Start() 
+        public void Init(int resolutionIndex, int targetFps, DisplayModes displayMode,  bool vSync)
         {
+            _resolutionIndex = resolutionIndex;
+            _targetFps = targetFps;
+            _displayMode = displayMode;
+            _vSync = vSync;
+
             _resolutions = Screen.resolutions.Where(resolution => resolution.refreshRate == _refreshRate).ToArray();
             _resolutions = Screen.resolutions.Where(resolution => resolution.height >= 720f).ToArray();
 
-            for (int i = 0; i < _resolutions.Length; i++)
+            if(_resolutionIndex < 0) //set default native resolution
             {
-                if (_resolutions[i].width == Screen.currentResolution.width 
-                && _resolutions[i].height == Screen.currentResolution.height)
+                for (int i = 0; i < _resolutions.Length; i++)
                 {
-                    _resolutionIndex = i;
+                    if (_resolutions[i].width == Screen.currentResolution.width 
+                    && _resolutions[i].height == Screen.currentResolution.height)
+                    {
+                        _resolutionIndex = i;
+                    }
                 }
             }
 
             SetResolutionsDropdown();
             SetTargetFpsDropdown();
             SetDisplayModesDropdown();
+            
+            _vSyncToggle.SetIsOnWithoutNotify(_vSync);
+            SetVSync(vSync);
         }
 
         public void SetResolution(int resolutionIndex)
@@ -53,11 +70,13 @@ namespace Fragsoft.Settings
 
         public void SetDisplayMode(int displayModeIndex)
         {
+            _displayMode = (DisplayModes) displayModeIndex;
             Screen.fullScreen = displayModeIndex == 1;
         }
 
         public void SetVSync(bool vSyncOn)
         {
+            _vSync = vSyncOn;
             QualitySettings.vSyncCount = vSyncOn ? 1 : 0;
         }
 
@@ -70,7 +89,9 @@ namespace Fragsoft.Settings
 	            string option = _resolutions[i].width + " x " + _resolutions[i].height;
 	            options.Add(option);
             }
+
             _resolutionDropdown.Init(options, _resolutionIndex);
+            SetResolution(_resolutionIndex);
         }
 
         private void SetTargetFpsDropdown()
@@ -79,7 +100,8 @@ namespace Fragsoft.Settings
             options.Add("30");
             options.Add("60");
             
-            _targetFpsDropdown.Init(options, _resolutionIndex); 
+            _targetFpsDropdown.Init(options, _targetFps); 
+            SetTargetFps(_targetFps);
         }
 
         private void SetDisplayModesDropdown()
@@ -92,9 +114,8 @@ namespace Fragsoft.Settings
                 options.Add(mode);
             }
             
-            _displayModeDropdown.Init(options, 0);
+            _displayModeDropdown.Init(options, (int)_displayMode);
+            SetDisplayMode((int)_displayMode);
         }
-
-        
     }    
 }

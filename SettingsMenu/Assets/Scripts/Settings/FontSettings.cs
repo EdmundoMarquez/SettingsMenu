@@ -8,11 +8,16 @@ namespace Fragsoft.Settings
 {
     public class FontSettings : MonoBehaviour
     {
-        [SerializeField] private AccessibleFontPresets _fontPresets = null;
         [SerializeField] private CustomDropdown _fontTypeDropdown = null;
+        private int _fontPreset;
+        private int _fontSize;
+        public int FontPreset => _fontPreset;
+        public int FontSize => _fontSize;
 
-        private void Start() 
+        public void Init(int fontPreset, int fontSize) 
         {
+            _fontPreset = fontPreset;
+            _fontSize = fontSize;
             SetFontPresetDropdown();
         }
 
@@ -23,13 +28,17 @@ namespace Fragsoft.Settings
             options.Add("Sans Serif");
             options.Add("Open Dyslexic");
             
-            _fontTypeDropdown.Init(options, _fontPresets.FixedPreset); 
+            _fontTypeDropdown.Init(options, _fontPreset); 
+            SetFontPreset(_fontPreset);
         }
 
         public void SetFontPreset(int presetIndex)
         {
-            _fontPresets.FixedPreset = presetIndex;
-            EventBus<FontChanged>.Raise(new FontChanged{});
+            _fontPreset = presetIndex;
+            EventBus<FontChanged>.Raise(new FontChanged
+            {
+                fontPreset = presetIndex
+            });
         }
     }
 }

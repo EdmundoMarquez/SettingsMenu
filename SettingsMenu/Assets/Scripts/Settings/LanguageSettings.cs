@@ -11,9 +11,12 @@ namespace Fragsoft.Settings
         [SerializeField] private TextAssetData[] _supportedLanguages = null;
         [SerializeField] private LanguageTextConverter _languageConverter = null;
         [SerializeField] private CustomDropdown _languageDropdown = null;
+        private int _languageIndex;
+        public int LanguageIndex => _languageIndex;
 
-        private void Start() 
+        public void Init(int languageIndex) 
         {
+            _languageIndex = languageIndex;
             SetLanguagesDropdown();
         }
 
@@ -26,11 +29,14 @@ namespace Fragsoft.Settings
                 options.Add(language.name);
             }
             
-            _languageDropdown.Init(options, 0);
+            _languageDropdown.Init(options, _languageIndex);
+            ChangeLanguage(_languageIndex);
         }
 
         public void ChangeLanguage(int languageIndex)
         {
+            _languageIndex = languageIndex;
+
             string id = _supportedLanguages[languageIndex].LanguageId;
             _languageConverter.ChangeLanguage(id);
         }

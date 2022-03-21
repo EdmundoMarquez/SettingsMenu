@@ -11,9 +11,16 @@ namespace Fragsoft.Settings
         [SerializeField] private CustomDropdown _graphicPresetsDropdown = null;
         [SerializeField] private CustomDropdown _textureQualityDropdown = null;
         // [SerializeField] private CustomDropdown _antiAliasingDropdown = null;
+        private int _graphicPreset;
+        private CustomQualityLevels _texturesQuality;
+        public int GraphicsPreset => _graphicPreset;
+        public int TexturesQuality => (int)_texturesQuality;
 
-        private void Start() 
+        public void Init(int graphicPreset, CustomQualityLevels texturesQuality) 
         {
+            _graphicPreset = graphicPreset;
+            _texturesQuality = texturesQuality;
+
             SetGraphicPresetsDropdown();
             SetCustomQualityDropdowns();
         }
@@ -57,7 +64,9 @@ namespace Fragsoft.Settings
                 options.Add(preset);
             }
             options.Add("Custom");
-            _graphicPresetsDropdown.Init(options, 0);
+            _graphicPresetsDropdown.Init(options, _graphicPreset);
+            
+            SetGraphicsPreset(_graphicPreset);
         }
 
         private void SetCustomQualityDropdowns()
@@ -70,7 +79,8 @@ namespace Fragsoft.Settings
                 options.Add(mode);
             }
             
-            _textureQualityDropdown.Init(options, 0);
+            _textureQualityDropdown.Init(options, (int)_texturesQuality);
+            SetGraphicsPreset((int)_texturesQuality);
         }
     }    
 }
