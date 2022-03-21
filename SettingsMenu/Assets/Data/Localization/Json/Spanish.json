@@ -1,6 +1,7 @@
 {
-    "apply_btn": "Aplicar",
+    "save_btn": "Guardar",
     "cancel_btn": "Cancelar",
+    "default_btn": "Reestablecer",
     "display_btn": "Gráficos",
     "audio_btn": "Sonido",
     "accessibility_btn": "Accesibilidad",

@@ -8,8 +8,6 @@ namespace Fragsoft.Fonts
     [CreateAssetMenu(fileName = "AccesibleFontPresets", menuName = "Accessibility/FontPresets", order = 0)]
     public class AccessibleFontPresets : ScriptableObject 
     {
-        public int FixedPreset = 1;
-        public float FixedSize = 35;
         [Header("Font Presets")]
         public TMP_FontAsset SerifFont;
         public TMP_FontAsset SansSerifFont;
@@ -19,9 +17,9 @@ namespace Fragsoft.Fonts
         [Range(20,35)] public float mediumSize = 35;
         [Range(35,50)] public float largeSize = 50;
 
-        public TMP_FontAsset GetFont()
+        public TMP_FontAsset GetFont(int preset)
         {
-            switch(FixedPreset)
+            switch(preset)
             {
                 default:
                 case 0:

@@ -9,14 +9,9 @@ namespace Fragsoft.Fonts
         [SerializeField] private AccessibleFontPresets _fontPresets;
         [SerializeField] private TMP_Text _text;
 
-        private void Start() 
-        {
-            _text.font = _fontPresets.GetFont();
-        }
-
         public void OnEvent(FontChanged e)
         {
-            _text.font = _fontPresets.GetFont();
+            _text.font = _fontPresets.GetFont(e.fontPreset);
         }
 
         private void OnEnable() 

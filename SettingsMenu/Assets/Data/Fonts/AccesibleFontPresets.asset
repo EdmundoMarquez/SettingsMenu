@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bc0bdbd1787b8daab34f4d11802009b, type: 3}
   m_Name: AccesibleFontPresets
   m_EditorClassIdentifier: 
-  FixedPreset: 0
-  FixedSize: 35
   SerifFont: {fileID: 11400000, guid: 6456a13592c7fe883bdc3da19da61871, type: 2}
   SansSerifFont: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   OpenDyslexicFont: {fileID: 11400000, guid: 913959e6eeb5836778aaff086bb87902, type: 2}

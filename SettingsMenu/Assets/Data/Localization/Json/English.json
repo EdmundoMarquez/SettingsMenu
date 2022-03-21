@@ -1,6 +1,7 @@
 {
-    "apply_btn": "Apply",
+    "save_btn": "Save",
     "cancel_btn": "Cancel",
+    "default_btn": "Default",
     "display_btn": "Display",
     "audio_btn": "Audio",
     "accessibility_btn": "Accessibility",
