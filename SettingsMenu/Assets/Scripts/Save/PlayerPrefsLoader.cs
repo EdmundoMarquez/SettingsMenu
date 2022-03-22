@@ -37,8 +37,9 @@ namespace Fragsoft.Save
             _screenSettings.Init(resolutionIndex, targetFps, (DisplayModes)displayMode, vSync);
             _graphicSettings.Init(graphicsPreset, (CustomQualityLevels)texturesQuality);
             _soundSettings.Init(masterVol, musicVol, sfxVol, ambientVol);
-            _languageSettings.Init(_savedPreferences.languageIndex);
             _fontSettings.Init(_savedPreferences.fontPreset, _savedPreferences.fontSize);
+            _languageSettings.Init(_savedPreferences.languageIndex);
+            _languageSettings.ChangeLanguage(_savedPreferences.languageIndex);
         }
 
         public void ResetPrefs()
@@ -48,8 +49,8 @@ namespace Fragsoft.Save
             _savedPreferences.displayMode = 1;
             _savedPreferences.vSync = 0;
 
-            _savedPreferences.graphicsPreset = 5;
-            _savedPreferences.texturesQuality = 2;
+            _savedPreferences.graphicsPreset = 4;
+            _savedPreferences.texturesQuality = 3;
 
             _savedPreferences.masterVol = -5;
             _savedPreferences.musicVol = -5;

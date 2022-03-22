@@ -7,8 +7,10 @@ namespace Fragsoft.Settings
 {
     public class FontSettings : MonoBehaviour
     {
-        [SerializeField] private CustomDropdown _fontTypeDropdown = null;
+        [SerializeField] private CustomDropdown _fontPresetDropdown = null;
+        [SerializeField] private DropdownOptions _fontPresetOptions = null;
         [SerializeField] private CustomDropdown _fontSizeDropdown = null;
+        [SerializeField] private DropdownOptions _fontSizeOptions = null;
         private int _fontPreset;
         private int _fontSize;
         public int FontPreset => _fontPreset;
@@ -24,23 +26,13 @@ namespace Fragsoft.Settings
 
         private void SetFontPresetDropdown()
         {
-            List<string> options = new List<string>();
-            options.Add("Serif");
-            options.Add("Sans Serif");
-            options.Add("Open Dyslexic");
-            
-            _fontTypeDropdown.Init(options, _fontPreset); 
+            _fontPresetDropdown.Init(_fontPresetOptions.Ids, _fontPreset); 
             SetFontPreset(_fontPreset);
         }
 
         private void SetFontSizeDropdown()
         {
-            List<string> options = new List<string>();
-            options.Add("Small");
-            options.Add("Medium");
-            options.Add("Large");
-            
-            _fontSizeDropdown.Init(options, _fontSize); 
+            _fontSizeDropdown.Init(_fontSizeOptions.Ids, _fontSize); 
             SetFontSize(_fontSize);
         }
 

@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
-using System;
 using System.Collections.Generic;
 using Fragsoft.Common;
 
@@ -11,7 +10,9 @@ namespace Fragsoft.Settings
     {
         [SerializeField] private  CustomDropdown _resolutionDropdown = null;
         [SerializeField] private  CustomDropdown _targetFpsDropdown = null;
+        [SerializeField] private DropdownOptions _targetFpsOptions;
         [SerializeField] private  CustomDropdown _displayModeDropdown = null;
+        [SerializeField] private DropdownOptions _displayModeOptions;
         [SerializeField] private Toggle _vSyncToggle = null;
         private int _refreshRate = 60;
         private Resolution[] _resolutions;
@@ -96,25 +97,13 @@ namespace Fragsoft.Settings
 
         private void SetTargetFpsDropdown()
         {
-            List<string> options = new List<string>();
-            options.Add("30");
-            options.Add("60");
-            
-            _targetFpsDropdown.Init(options, _targetFps); 
+            _targetFpsDropdown.Init(_targetFpsOptions.Ids, _targetFps); 
             SetTargetFps(_targetFps);
         }
 
         private void SetDisplayModesDropdown()
         {
-            List<string> options = new List<string>();
-            string[] displayModes = Enum.GetNames(typeof(DisplayModes));
-              
-            foreach(var mode in displayModes)
-            {
-                options.Add(mode);
-            }
-            
-            _displayModeDropdown.Init(options, (int)_displayMode);
+            _displayModeDropdown.Init(_displayModeOptions.Ids, (int)_displayMode);
             SetDisplayMode((int)_displayMode);
         }
     }    

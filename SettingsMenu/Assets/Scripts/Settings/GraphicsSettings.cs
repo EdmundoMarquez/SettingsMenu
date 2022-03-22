@@ -9,7 +9,9 @@ namespace Fragsoft.Settings
     public class GraphicsSettings : MonoBehaviour
     {
         [SerializeField] private CustomDropdown _graphicPresetsDropdown = null;
+        [SerializeField] private DropdownOptions _graphicPresetsOptions = null;
         [SerializeField] private CustomDropdown _textureQualityDropdown = null;
+        [SerializeField] private DropdownOptions _textureQualityOptions = null;
         // [SerializeField] private CustomDropdown _antiAliasingDropdown = null;
         private int _graphicPreset;
         private CustomQualityLevels _texturesQuality;
@@ -57,29 +59,13 @@ namespace Fragsoft.Settings
 
         private void SetGraphicPresetsDropdown()
         {
-            List<string> options = new List<string>();
-
-            foreach(var preset in QualitySettings.names)
-            {
-                options.Add(preset);
-            }
-            options.Add("Custom");
-            _graphicPresetsDropdown.Init(options, _graphicPreset);
-            
+            _graphicPresetsDropdown.Init(_graphicPresetsOptions.Ids, _graphicPreset);
             SetGraphicsPreset(_graphicPreset);
         }
 
         private void SetCustomQualityDropdowns()
         {
-            List<string> options = new List<string>();
-            string[] displayModes = Enum.GetNames(typeof(CustomQualityLevels));
-              
-            foreach(var mode in displayModes)
-            {
-                options.Add(mode);
-            }
-            
-            _textureQualityDropdown.Init(options, (int)_texturesQuality);
+            _textureQualityDropdown.Init(_textureQualityOptions.Ids, (int)_texturesQuality);
             SetGraphicsPreset((int)_texturesQuality);
         }
     }    

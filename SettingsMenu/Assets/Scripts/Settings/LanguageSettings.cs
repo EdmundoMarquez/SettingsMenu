@@ -26,11 +26,10 @@ namespace Fragsoft.Settings
 
             foreach(var language in _supportedLanguages)
             {
-                options.Add(language.name);
+                options.Add(language.LanguageId);
             }
             
             _languageDropdown.Init(options, _languageIndex);
-            ChangeLanguage(_languageIndex);
         }
 
         public void ChangeLanguage(int languageIndex)
