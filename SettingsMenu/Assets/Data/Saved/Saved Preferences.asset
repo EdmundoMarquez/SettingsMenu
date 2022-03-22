@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cc16fffdebc23f628793a79a0b956a9, type: 3}
   m_Name: Saved Preferences
   m_EditorClassIdentifier: 
-  resolutionIndex: 0
+  resolutionIndex: -1
   displayMode: 1
   targetFps: 1
   vSync: 0
-  graphicsPreset: 5
-  texturesQuality: 2
+  graphicsPreset: 4
+  texturesQuality: 3
   masterVol: -5
   musicVol: -5
   sfxVol: -5

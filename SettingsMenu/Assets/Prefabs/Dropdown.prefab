@@ -573,7 +573,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 30
   m_Viewport: {fileID: 6509317087807992242}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 6509317087495616569}
@@ -595,7 +595,6 @@ GameObject:
   - component: {fileID: 6509317087714542637}
   - component: {fileID: 6509317087714542635}
   - component: {fileID: 6509317087714542636}
-  - component: {fileID: 4628393301164420257}
   m_Layer: 5
   m_Name: Item Label
   m_TagString: Untagged
@@ -718,20 +717,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &4628393301164420257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6509317087714542638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8b1b6ca944362853b5a20c6c77dd434, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _fontPresets: {fileID: 11400000, guid: 269d1fb307ae4c453920133cc301b370, type: 2}
-  _text: {fileID: 6509317087714542636}
 --- !u!1 &6509317087807992243
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,6 +820,7 @@ GameObject:
   - component: {fileID: 6509317087882197350}
   - component: {fileID: 3984080060001227036}
   - component: {fileID: 8788361561093049732}
+  - component: {fileID: 8241136543251168906}
   m_Layer: 5
   m_Name: Dropdown
   m_TagString: Untagged
@@ -951,6 +937,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _customDropdown: {fileID: 3984080060001227036}
+--- !u!114 &8241136543251168906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6509317087882197352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8b1b6ca944362853b5a20c6c77dd434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fontPresets: {fileID: 11400000, guid: 269d1fb307ae4c453920133cc301b370, type: 2}
+  _text: {fileID: 6509317087714542636}
 --- !u!1 &6509317088068877919
 GameObject:
   m_ObjectHideFlags: 0

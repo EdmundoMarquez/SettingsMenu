@@ -29,7 +29,7 @@ namespace Fragsoft.Settings
         
         public void SetGraphicsPreset(int presetIndex)
         {
-            if(presetIndex == 6) //not counting custom preset
+            if(presetIndex == 5) //not counting custom preset
             {
                 return;
             }
@@ -54,7 +54,7 @@ namespace Fragsoft.Settings
         public void SetTextureQuality(int qualityIndex)
         {
             QualitySettings.masterTextureLimit = qualityIndex;
-            _graphicPresetsDropdown.Dropdown.value = 6;
+            _graphicPresetsDropdown.Dropdown.value = 5;
         }
 
         private void SetGraphicPresetsDropdown()
