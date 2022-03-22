@@ -23,8 +23,6 @@ namespace Fragsoft.Language
             _idToDialogueText = new Dictionary<string, string>();
             _currentLanguage = "";
             Instance = this;
-
-            SetInitialLanguage("en");
         }
         public static string LoadTitleText(string textId)
         {
@@ -47,7 +45,11 @@ namespace Fragsoft.Language
         }
         public void ChangeLanguage(string languageId)
         {
-            if(_currentLanguage.Equals(languageId)) return;
+            if(_currentLanguage.Equals(languageId))
+            {
+                EventBus<LanguageChanged>.Raise(new LanguageChanged{});
+                return;
+            } 
             _currentLanguage = languageId;
             var json = _localizationLoader.LoadTitleLanguageData(languageId);
             _idToTileText.Clear();
