@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 424b7e05b582b2064b3e8627f72c6c20, type: 3}
   m_Name: Spanish
   m_EditorClassIdentifier: 
-  _languageId: es
+  _languageId: language_es
   _languageAsset: {fileID: 4900000, guid: 337a4b1fd3b3b49de954edc44391cfaa, type: 3}

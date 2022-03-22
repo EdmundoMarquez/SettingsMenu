@@ -20,5 +20,18 @@
     "language": "Language",
     "font_preset": "Font Preset",
     "font_size": "Font Size",
-    "tts": "Text-To-Speech (TTS)"
+    "tts": "Text-To-Speech (TTS)",
+    "quality_very_low" : "Very Low",
+    "quality_low" : "Low",
+    "quality_medium" : "Medium",
+    "quality_high" : "High",
+    "quality_ultra" : "Ultra",
+    "quality_custom" : "Custom",
+    "display_windowed" : "Windowed",
+    "display_fullscreen" : "Fullscreen",
+    "language_en" : "English",
+    "language_es" : "Spanish",
+    "font_small" : "Small",
+    "font_medium" : "Medium",
+    "font_large" : "Large"
 }

@@ -12,7 +12,7 @@
     "vsync": "V-Sync",
     "graphic_presets": "Gráficos",
     "texture_quality": "Texturas",
-    "antialias": "Anti-aliiasing",
+    "antialias": "Anti-alliasing",
     "sound_master": "General",
     "sound_music": "Música",
     "sound_sfx": "Efectos de sonido",
@@ -20,5 +20,18 @@
     "language": "Idioma",
     "font_preset": "Fuente de texto",
     "font_size": "Tamaño de texto",
-    "tts": "Text-To-Speech (TTS)"
+    "tts": "Text-To-Speech (TTS)",
+    "quality_very_low" : "Muy bajo",
+    "quality_low" : "Bajo",
+    "quality_medium" : "Medio",
+    "quality_high" : "Alto",
+    "quality_ultra" : "Ultra",
+    "quality_custom" : "Personalizado",
+    "display_windowed" : "Ventana",
+    "display_fullscreen" : "Pantalla completa",
+    "language_en" : "Inglés",
+    "language_es" : "Español",
+    "font_small" : "Pequeño",
+    "font_medium" : "Mediano",
+    "font_large" : "Grande"
 }
