@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using TMPro;
-using Fragsoft.Language;
+using EdsDevExp.Language;
 using System.Collections.Generic;
-using Fragsoft.Common;
+using EdsDevExp.Common;
 
-namespace Fragsoft.Settings
+namespace EdsDevExp.Settings
 {
     public class LanguageSettings : MonoBehaviour
     {

@@ -1,5 +1,5 @@
 using UnityEngine;
-namespace Fragsoft.EventBus
+namespace EdsDevExp.EventBus
 {
     public struct FontChanged : IEvent 
     {

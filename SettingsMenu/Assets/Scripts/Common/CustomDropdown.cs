@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 
-namespace Fragsoft.Common
+namespace EdsDevExp.Common
 {
     public class CustomDropdown : MonoBehaviour
     {

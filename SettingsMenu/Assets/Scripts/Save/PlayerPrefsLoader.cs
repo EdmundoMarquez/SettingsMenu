@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Fragsoft.Settings;
+using EdsDevExp.Settings;
 
-namespace Fragsoft.Save
+namespace EdsDevExp.Save
 {
     public class PlayerPrefsLoader : MonoBehaviour
     {

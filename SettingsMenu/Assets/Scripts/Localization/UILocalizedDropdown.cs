@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-using Fragsoft.EventBus;
-using Fragsoft.Common;
+using EdsDevExp.EventBus;
+using EdsDevExp.Common;
 
-namespace Fragsoft.Language
+namespace EdsDevExp.Language
 {
     public class UILocalizedDropdown : MonoBehaviour, IEventReceiver<LanguageChanged>
     {

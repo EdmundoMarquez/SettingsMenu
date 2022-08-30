@@ -1,8 +1,7 @@
 {
-    "name": "Fragsoft.Fonts",
+    "name": "EdsDevExp.Save",
     "references": [
-        "GUID:6055be8ebefd69e48b49212b09b47b2f",
-        "GUID:a9c31b4621f989acfb41892392b16fee"
+        "GUID:9e2e7b50d7ed1cb49899809ac6fe11cf"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

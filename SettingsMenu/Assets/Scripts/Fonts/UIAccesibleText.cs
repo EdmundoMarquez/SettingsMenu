@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
-using Fragsoft.EventBus;
+using EdsDevExp.EventBus;
 using TMPro;
 
-namespace Fragsoft.Fonts
+namespace EdsDevExp.Fonts
 {
     public class UIAccesibleText : MonoBehaviour, IEventReceiver<FontChanged>
     {

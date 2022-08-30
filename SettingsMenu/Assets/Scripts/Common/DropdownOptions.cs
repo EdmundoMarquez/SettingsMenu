@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-namespace Fragsoft.Common
+namespace EdsDevExp.Common
 {
     
     [CreateAssetMenu(fileName = "Dropdown Options", menuName = "Common/DropdownOptions", order = 0)]

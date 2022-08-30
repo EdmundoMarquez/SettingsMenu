@@ -2,7 +2,7 @@
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-namespace Fragsoft.Settings
+namespace EdsDevExp.Settings
 {
     public class SoundSettings : MonoBehaviour
     {

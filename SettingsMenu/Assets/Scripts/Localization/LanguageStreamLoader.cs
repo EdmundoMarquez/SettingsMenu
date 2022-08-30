@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-namespace Fragsoft.Language
+namespace EdsDevExp.Language
 {
     public class LanguageStreamLoader : MonoBehaviour
     {

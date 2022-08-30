@@ -2,9 +2,9 @@
 using UnityEngine.UI;
 using System.Linq;
 using System.Collections.Generic;
-using Fragsoft.Common;
+using EdsDevExp.Common;
 
-namespace Fragsoft.Settings
+namespace EdsDevExp.Settings
 {
     public class ScreenSettings : MonoBehaviour
     {

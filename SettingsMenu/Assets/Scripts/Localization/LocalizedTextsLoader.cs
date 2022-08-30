@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Fragsoft.Language
+namespace EdsDevExp.Language
 {
     public class LocalizedTextsLoader : MonoBehaviour
     {

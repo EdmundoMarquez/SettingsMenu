@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Fragsoft.Settings
+namespace EdsDevExp.Settings
 {
     public enum DisplayModes
     {

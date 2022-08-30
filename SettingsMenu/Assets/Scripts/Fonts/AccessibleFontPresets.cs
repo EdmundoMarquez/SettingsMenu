@@ -1,7 +1,7 @@
 ﻿using TMPro;
 
 
-namespace Fragsoft.Fonts
+namespace EdsDevExp.Fonts
 {
     using UnityEngine;
     

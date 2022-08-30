@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.IO;
 
-namespace Fragsoft.Save
+namespace EdsDevExp.Save
 {
     public static class PreferencesFileHandler
     {

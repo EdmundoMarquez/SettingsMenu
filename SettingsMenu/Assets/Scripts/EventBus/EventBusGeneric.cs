@@ -1,4 +1,4 @@
-﻿namespace Fragsoft.EventBus
+﻿namespace EdsDevExp.EventBus
 {
     using UnityEngine;
     using System;

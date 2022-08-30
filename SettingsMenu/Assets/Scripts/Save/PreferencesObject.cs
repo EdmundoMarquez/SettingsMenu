@@ -1,4 +1,4 @@
-namespace Fragsoft.Save
+namespace EdsDevExp.Save
 {
     public class PreferencesObject
     {

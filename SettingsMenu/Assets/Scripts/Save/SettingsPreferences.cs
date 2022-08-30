@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Fragsoft.Save
+namespace EdsDevExp.Save
 {
     [CreateAssetMenu(fileName = "Saved Preferences", menuName = "Settings/SavedPreferences", order = 0)]
     public class SettingsPreferences : ScriptableObject

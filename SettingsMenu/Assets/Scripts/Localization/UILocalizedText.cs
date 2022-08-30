@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using TMPro;
-using Fragsoft.EventBus;
+using EdsDevExp.EventBus;
 
-namespace Fragsoft.Language
+namespace EdsDevExp.Language
 {
     public class UILocalizedText : MonoBehaviour, IEventReceiver<LanguageChanged>
     {

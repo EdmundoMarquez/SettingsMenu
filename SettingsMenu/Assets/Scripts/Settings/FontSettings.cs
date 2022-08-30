@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using Fragsoft.EventBus;
-using Fragsoft.Common;
+using EdsDevExp.EventBus;
+using EdsDevExp.Common;
 
-namespace Fragsoft.Settings
+namespace EdsDevExp.Settings
 {
     public class FontSettings : MonoBehaviour
     {
