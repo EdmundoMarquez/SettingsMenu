@@ -7,7 +7,7 @@ namespace Fragsoft.Save
 {
     public class PlayerPrefsLoader : MonoBehaviour
     {
-        [SerializeField] private SettingsPreferences _savedPreferences = null;
+        [SerializeField] private SettingsPreferences _defaultPreferences = null;
         [SerializeField] private ScreenSettings _screenSettings = null;
         [SerializeField] private GraphicsSettings _graphicSettings = null;
         [SerializeField] private SoundSettings _soundSettings = null;
@@ -21,46 +21,51 @@ namespace Fragsoft.Save
 
         public void LoadPrefs()
         {
-            int resolutionIndex = _savedPreferences.resolutionIndex; 
-            int targetFps = _savedPreferences.targetFps;
-            int displayMode = _savedPreferences.displayMode;
-            bool vSync = _savedPreferences.vSync == 1;
+            PreferencesObject preferences = PreferencesFileHandler.Load();
 
-            int graphicsPreset = _savedPreferences.graphicsPreset;
-            int texturesQuality = _savedPreferences.texturesQuality;
+            int resolutionIndex = preferences.resolutionIndex; 
+            int targetFps = preferences.targetFps;
+            int displayMode = preferences.displayMode;
+            bool vSync = (preferences.vSync == 1);
 
-            int masterVol = _savedPreferences.masterVol;
-            int musicVol = _savedPreferences.musicVol;
-            int sfxVol = _savedPreferences.sfxVol;
-            int ambientVol = _savedPreferences.ambientVol;
+            int graphicsPreset = preferences.graphicsPreset;
+            int texturesQuality = preferences.texturesQuality;
+
+            int masterVol = preferences.masterVol;
+            int musicVol = preferences.musicVol;
+            int sfxVol = preferences.sfxVol;
+            int ambientVol = preferences.ambientVol;
 
             _screenSettings.Init(resolutionIndex, targetFps, (DisplayModes)displayMode, vSync);
             _graphicSettings.Init(graphicsPreset, (CustomQualityLevels)texturesQuality);
             _soundSettings.Init(masterVol, musicVol, sfxVol, ambientVol);
-            _fontSettings.Init(_savedPreferences.fontPreset, _savedPreferences.fontSize);
-            _languageSettings.Init(_savedPreferences.languageIndex);
-            _languageSettings.ChangeLanguage(_savedPreferences.languageIndex);
+            _fontSettings.Init(preferences.fontPreset, preferences.fontSize);
+            _languageSettings.Init(preferences.languageIndex);
+            _languageSettings.ChangeLanguage(preferences.languageIndex);
         }
 
         public void ResetPrefs()
         {
-            _savedPreferences.resolutionIndex = -1;
-            _savedPreferences.targetFps = 1;
-            _savedPreferences.displayMode = 1;
-            _savedPreferences.vSync = 0;
+            PreferencesObject preferences = PreferencesFileHandler.Load();
 
-            _savedPreferences.graphicsPreset = 4;
-            _savedPreferences.texturesQuality = 3;
+            preferences.resolutionIndex = _defaultPreferences.resolutionIndex;
+            preferences.targetFps = _defaultPreferences.targetFps;
+            preferences.displayMode = _defaultPreferences.displayMode;
+            preferences.vSync = _defaultPreferences.vSync;
 
-            _savedPreferences.masterVol = -5;
-            _savedPreferences.musicVol = -5;
-            _savedPreferences.sfxVol = -5;
-            _savedPreferences.ambientVol = -5;
+            preferences.graphicsPreset = _defaultPreferences.graphicsPreset;
+            preferences.texturesQuality = _defaultPreferences.texturesQuality;
+
+            preferences.masterVol = _defaultPreferences.masterVol;
+            preferences.musicVol = _defaultPreferences.musicVol;
+            preferences.sfxVol = _defaultPreferences.sfxVol;
+            preferences.ambientVol = _defaultPreferences.ambientVol;
             
-            _savedPreferences.languageIndex = 0;
-            _savedPreferences.fontPreset = 1;
-            _savedPreferences.fontSize = 1;
+            preferences.languageIndex = _defaultPreferences.languageIndex;
+            preferences.fontPreset = _defaultPreferences.fontPreset;
+            preferences.fontSize = _defaultPreferences.fontSize;
 
+            PreferencesFileHandler.Save(preferences);
             LoadPrefs();
         }
     }    

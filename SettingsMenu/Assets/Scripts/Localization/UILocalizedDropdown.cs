@@ -21,7 +21,6 @@ namespace Fragsoft.Language
             for (int i = 0; i < options.Count; i++)
             {
                 string localizedText = LanguageTextConverter.LoadTitleText(options[i]);
-                Debug.Log(localizedText);
                 _customDropdown.Dropdown.options[i].text = localizedText;
             }
             

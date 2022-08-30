@@ -7,7 +7,6 @@ namespace Fragsoft.Save
 {
     public class PlayerPrefsSaver: MonoBehaviour
     {
-        [SerializeField] private SettingsPreferences _savedPreferences = null;
         [SerializeField] private ScreenSettings _screenSettings = null;
         [SerializeField] private GraphicsSettings _graphicSettings = null;
         [SerializeField] private SoundSettings _soundSettings = null;
@@ -16,22 +15,26 @@ namespace Fragsoft.Save
 
         public void SavePrefs() 
         {
-            _savedPreferences.resolutionIndex = _screenSettings.ResolutionIndex;
-            _savedPreferences.targetFps = _screenSettings.TargetFps;
-            _savedPreferences.displayMode = _screenSettings.DisplayMode;
-            _savedPreferences.vSync = _screenSettings.VSync;
+            PreferencesObject preferences = new PreferencesObject();
 
-            _savedPreferences.graphicsPreset = _graphicSettings.GraphicsPreset;
-            _savedPreferences.texturesQuality = _graphicSettings.TexturesQuality;
+            preferences.resolutionIndex = _screenSettings.ResolutionIndex;
+            preferences.targetFps = _screenSettings.TargetFps;
+            preferences.displayMode = _screenSettings.DisplayMode;
+            preferences.vSync = _screenSettings.VSync;
 
-            _savedPreferences.masterVol = _soundSettings.MasterVol;
-            _savedPreferences.musicVol = _soundSettings.MusicVol;
-            _savedPreferences.sfxVol = _soundSettings.SfxVol;
-            _savedPreferences.ambientVol = _soundSettings.AmbientVol;
+            preferences.graphicsPreset = _graphicSettings.GraphicsPreset;
+            preferences.texturesQuality = _graphicSettings.TexturesQuality;
+
+            preferences.masterVol = _soundSettings.MasterVol;
+            preferences.musicVol = _soundSettings.MusicVol;
+            preferences.sfxVol = _soundSettings.SfxVol;
+            preferences.ambientVol = _soundSettings.AmbientVol;
             
-            _savedPreferences.languageIndex = _languageSettings.LanguageIndex;
-            _savedPreferences.fontPreset = _fontSettings.FontPreset;
-            _savedPreferences.fontSize = _fontSettings.FontSize;
+            preferences.languageIndex = _languageSettings.LanguageIndex;
+            preferences.fontPreset = _fontSettings.FontPreset;
+            preferences.fontSize = _fontSettings.FontSize;
+
+            PreferencesFileHandler.Save(preferences);
         }
     }    
 }

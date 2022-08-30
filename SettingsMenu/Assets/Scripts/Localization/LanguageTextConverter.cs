@@ -60,6 +60,7 @@ namespace Fragsoft.Language
             // _idToDialogueText = DeserializeTextData(json);
 
             EventBus<LanguageChanged>.Raise(new LanguageChanged{});
+            Debug.Log($"Language changed to {languageId}");
         }
         public static void SetInitialLanguage(string languageId)
         {

@@ -1,0 +1,1 @@
+{"resolutionIndex":-1,"displayMode":1,"targetFps":1,"vSync":0,"graphicsPreset":4,"texturesQuality":3,"masterVol":-5,"musicVol":-5,"sfxVol":-5,"ambientVol":-5,"languageIndex":0,"fontPreset":1,"fontSize":1}

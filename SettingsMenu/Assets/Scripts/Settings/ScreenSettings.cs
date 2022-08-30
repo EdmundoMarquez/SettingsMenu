@@ -17,18 +17,18 @@ namespace Fragsoft.Settings
         private int _refreshRate = 60;
         private Resolution[] _resolutions;
         private int _resolutionIndex;
-        private int _targetFps;
+        private int _targetFpsIndex;
         private DisplayModes _displayMode;
         private bool _vSync;
         public int ResolutionIndex => _resolutionIndex;
-        public int TargetFps => _targetFps;
+        public int TargetFps => _targetFpsIndex;
         public int DisplayMode => (int)_displayMode;
         public int VSync => _vSync ? 1 : 0;
 
         public void Init(int resolutionIndex, int targetFps, DisplayModes displayMode,  bool vSync)
         {
             _resolutionIndex = resolutionIndex;
-            _targetFps = targetFps;
+            _targetFpsIndex = targetFps;
             _displayMode = displayMode;
             _vSync = vSync;
 
@@ -51,8 +51,8 @@ namespace Fragsoft.Settings
             SetTargetFpsDropdown();
             SetDisplayModesDropdown();
             
-            _vSyncToggle.SetIsOnWithoutNotify(_vSync);
-            SetVSync(vSync);
+            _vSyncToggle.onValueChanged.AddListener(delegate {SetVSync(_vSyncToggle);});
+            _vSyncToggle.isOn = _vSync;
         }
 
         public void SetResolution(int resolutionIndex)
@@ -65,8 +65,8 @@ namespace Fragsoft.Settings
         
         public void SetTargetFps(int fpsTargetIndex)
         {
-            _targetFps = fpsTargetIndex == 0 ? 30 : 60;
-            Application.targetFrameRate = _targetFps;
+            _targetFpsIndex = fpsTargetIndex;
+            Application.targetFrameRate = _targetFpsIndex == 0 ? 30 : 60;
         }
 
         public void SetDisplayMode(int displayModeIndex)
@@ -75,10 +75,10 @@ namespace Fragsoft.Settings
             Screen.fullScreen = displayModeIndex == 1;
         }
 
-        public void SetVSync(bool vSyncOn)
+        public void SetVSync(Toggle vsyncToggle)
         {
-            _vSync = vSyncOn;
-            QualitySettings.vSyncCount = vSyncOn ? 1 : 0;
+            _vSync = vsyncToggle.isOn;
+            QualitySettings.vSyncCount = _vSync ? 1 : 0;
         }
 
         public void SetResolutionsDropdown()
@@ -97,8 +97,9 @@ namespace Fragsoft.Settings
 
         private void SetTargetFpsDropdown()
         {
-            _targetFpsDropdown.Init(_targetFpsOptions.Ids, _targetFps); 
-            SetTargetFps(_targetFps);
+            
+            _targetFpsDropdown.Init(_targetFpsOptions.Ids, _targetFpsIndex); 
+            SetTargetFps(_targetFpsIndex);
         }
 
         private void SetDisplayModesDropdown()
